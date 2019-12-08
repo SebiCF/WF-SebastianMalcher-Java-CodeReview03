@@ -61,7 +61,6 @@ public class Main {
                     System.out.println("Please enter a correct input.");
             }
         }
-
     }
 
     private static void createUser() {
