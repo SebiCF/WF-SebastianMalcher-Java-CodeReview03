@@ -3,7 +3,7 @@ package citybike;
 public class Bike {
 
     public enum bikeState {
-        CanBeRented, CanNotBeRented, InService, Discarded
+        CanBeRented, CanNotBeRented, InService, Discarded, Damaged
     }
 
     private static int idCount = 1;
@@ -12,7 +12,6 @@ public class Bike {
     private bikeState state;
 
     Bike(String bikeColor, bikeState state) {
-
         this.bikeID = idCount++;
         this.bikeColor = bikeColor;
         this.state = state;
@@ -52,6 +51,10 @@ public class Bike {
 
     @Override
     public String toString() {
-        return String.valueOf(this.getBikeID()) + " " + getBikeColor();
+        return "Bike{" +
+                "bikeID=" + bikeID +
+                ", bikeColor='" + bikeColor + '\'' +
+                ", state=" + state +
+                '}';
     }
 }
